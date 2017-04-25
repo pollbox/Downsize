@@ -42,7 +42,7 @@ var XRegexp = require('xregexp').XRegExp;
         }
 
         options.keepContext     = !!options.contextualTags;
-        options.contextualTags  = 
+        options.contextualTags  =
             options.keepContext && Array.isArray(options.contextualTags) ?
                 options.contextualTags : [];
 
@@ -91,6 +91,9 @@ var XRegexp = require('xregexp').XRegExp;
                         if (!trackedState.countState) {
                             trackedState.unitCount++;
                         }
+                    }else if(XRegexp('^\\p{Han}+$').test(chr)){
+                            //支持中文计数
+                            trackedState.unitCount++;
                     }
                     break;
 
