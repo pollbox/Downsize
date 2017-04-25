@@ -17,7 +17,7 @@ downsize("<p>some markup here...</p>",{"words": 2});
 ```html
 <p>some markup</p>
 ```
-###添加支持中文数字统计
+### 添加支持中文数字统计
 
 ```javascript
 downsize("<p>欢迎您的访问...</p>",{"words": 2});
